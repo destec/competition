@@ -1,0 +1,7 @@
+<div ng-controller="ScoreCtrl">
+  <div ng-repeat="team in teams | orderBy: ['-score', 'table']">
+    <h4>{{team.table}}号桌-<strong>{{team.name}}:<font style="color: orange">{{team.score}}</font></strong></h4>
+    <button type="button" ng-click="addScore(team.id, 1)" class="btn btn-primary btn-xs">加一分</button>
+    <button type="button" ng-click="addScore(team.id, 10)" class="btn btn-info btn-xs">加十分</button>
+  </div>
+</div>
